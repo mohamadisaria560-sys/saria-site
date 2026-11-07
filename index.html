@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎓 دنیای شاد ضرب و تقسیم</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== هدر ===== -->
+  <header class="hero">
+    <div class="floating-symbols" aria-hidden="true">
+      <span>✖️</span><span>➗</span><span>۷</span><span>۳</span><span>=</span><span>۹</span><span>✖️</span><span>➗</span>
+    </div>
+    <h1 class="hero-title">دنیای شاد <span class="hl">ضرب</span> و <span class="hl">تقسیم</span></h1>
+    <p class="hero-sub">بیا با هم بازی کنیم و ریاضی را یاد بگیریم! 🎈</p>
+  </header>
+
+  <!-- ===== نوار ناوبری تب‌ها ===== -->
+  <nav class="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="table" role="tab">📊 جدول ضرب</button>
+    <button class="tab-btn" data-tab="division" role="tab">🍎 تقسیم بصری</button>
+    <button class="tab-btn" data-tab="mulGame" role="tab">🎯 بازی ضرب</button>
+    <button class="tab-btn" data-tab="divGame" role="tab">🎮 بازی تقسیم</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- ===== بخش ۱: جدول ضرب ===== -->
+    <section id="table" class="panel active">
+      <h2 class="panel-title">جدول ضرب جادویی ✨</h2>
+      <p class="panel-desc">روی هر خانه کلیک کن تا جوابش را ببینی!</p>
+      <div class="mult-table-wrapper">
+        <div id="multTable" class="mult-table"></div>
+      </div>
+    </section>
+
+    <!-- ===== بخش ۲: تقسیم بصری ===== -->
+    <section id="division" class="panel">
+      <h2 class="panel-title">تقسیم با سیب‌ها 🍎</h2>
+      <p class="panel-desc">انتخاب کن چند سیب بین چند سبد تقسیم شوند!</p>
+
+      <div class="controls">
+        <label>تعداد سیب:
+          <input type="number" id="totalItems" min="1" max="36" value="12" />
+        </label>
+        <label>تعداد سبد:
+          <input type="number" id="baskets" min="1" max="9" value="3" />
+        </label>
+        <button id="divideBtn" class="btn-primary">تقسیم کن! 🪄</button>
+      </div>
+
+      <div id="divisionResult" class="division-result"></div>
+    </section>
+
+    <!-- ===== بخش ۳: بازی ضرب ===== -->
+    <section id="mulGame" class="panel">
+      <h2 class="panel-title">بازی ضرب: گزینه درست را بزن! 🎯</h2>
+      <div class="game-box">
+        <p class="score">امتیاز: <span id="mulScore">0</span></p>
+        <p class="question" id="mulQuestion">?</p>
+        <div class="options" id="mulOptions"></div>
+        <p class="feedback" id="mulFeedback"></p>
+        <button class="btn-secondary" id="mulRestart">🔄 شروع دوباره</button>
+      </div>
+    </section>
+
+    <!-- ===== بخش ۴: بازی تقسیم (کشیدن و رها کردن) ===== -->
+    <section id="divGame" class="panel">
+      <h2 class="panel-title">بازی تقسیم: سیب‌ها را در سبدها بچین! 🧺</h2>
+      <div class="game-box">
+        <p class="score">امتیاز: <span id="divScore">0</span></p>
+        <p class="question" id="divQuestion">?</p>
+
+        <div class="pool" id="applePool"></div>
+        <div class="baskets-row" id="basketsRow"></div>
+
+        <p class="feedback" id="divFeedback"></p>
+        <button class="btn-secondary" id="divRestart">🔄 شروع دوباره</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    ساخته‌شده با ❤️ برای یادگیری شاد ریاضی
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
